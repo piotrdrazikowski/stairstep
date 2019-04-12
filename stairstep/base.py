@@ -65,7 +65,8 @@ class StateBase(SSBase):
         timestamppath = None,
         secondspath = None,
         end = None,
-        parameters = None
+        parameters = None,
+        catch = None
     ):
         #TODO - Refactor to unpack via **kwargs and map against prop_map
         self.name = name
@@ -78,6 +79,7 @@ class StateBase(SSBase):
         self.timestamppath = timestamppath
         self.secondspath = secondspath
         self.parameters = parameters
+        self.catch = catch
 
         if timestamp is not None:
             self.timestamp = timestamp.isoformat() #compliant ISO-8601 export 
