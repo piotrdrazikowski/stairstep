@@ -23,10 +23,10 @@ def validation_end_cannot_be_true(self):
         raise AttributeError("End cannot be True for this State Type")
 
 def validation_cannot_have_io_path_fields(self):
-    if self.inputpath is not None:
+    if hasattr(self, 'inputpath') and self.inputpath is not None:
         raise AttributeError("Fail State cannot have InputPath, OutputPath")
     
-    if self.output is not None:
+    if hasattr(self, 'output') and self.output is not None:
         raise AttributeError("Fail State cannot have InputPath, OutputPath")
 
 def validation_must_contain_only_one_time_field(self):    
