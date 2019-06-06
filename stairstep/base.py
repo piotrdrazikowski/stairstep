@@ -39,6 +39,7 @@ class StateBase(SSBase):
             "next"      : "Next",
             "inputpath" : "InputPath",
             "outputpath": "OutputPath",
+            "resultpath": "ResultPath",
             "retry"     : "Retry",
             "catch"     : "Catch",
             "end"       : "End",
