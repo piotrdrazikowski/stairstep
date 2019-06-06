@@ -67,7 +67,8 @@ class StateBase(SSBase):
         end = None,
         parameters = None,
         catch = None,
-        outputpath = None
+        outputpath = None,
+        resultpath = None,
     ):
         #TODO - Refactor to unpack via **kwargs and map against prop_map
         self.name = name
@@ -82,6 +83,7 @@ class StateBase(SSBase):
         self.parameters = parameters
         self.catch = catch
         self.outputpath = outputpath
+        self.resultpath = resultpath
 
         if timestamp is not None:
             self.timestamp = timestamp.isoformat() #compliant ISO-8601 export 
